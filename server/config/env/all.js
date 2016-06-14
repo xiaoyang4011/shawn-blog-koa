@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	port: process.env.PORT || 10500,
+	port: process.env.PORT || 3000,
 	recluster: {
 		pidFilePath: '/var/run/yunniao/'
 	},

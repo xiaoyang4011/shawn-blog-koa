@@ -9,7 +9,7 @@ module.exports = {
 		alwaysIncludePattern: true
 	},
 	db: {
-		uri: 'mongodb://' + (process.env.DB_HOST_PORT || '127.0.0.1:27017') + '/beeper2',
+		uri: 'mongodb://' + (process.env.DB_HOST_PORT || '127.0.0.1:27017') + '/blog',
 		options: {
 			user: '',
 			pass: ''

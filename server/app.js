@@ -5,7 +5,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const Koa = require('koa');
 const app = new Koa();
 const mongoose = require('mongoose');
-const config = require('./config/env');
+const config = require('./config');
 
 mongoose.connect(config.mongo.uri, config.mongo.options);
 
@@ -16,7 +16,7 @@ app.use(async (ctx, next) => {
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
 
-require('./routes')(app);
+//require('./routes')(app);
 
 app.on('error',(err,ctx)=>{
 	if (process.env.NODE_ENV != 'test') {
@@ -24,6 +24,4 @@ app.on('error',(err,ctx)=>{
 	}
 });
 
-app.listen(config.port, function () {
-  console.log('server listening on %d, in %s mode', config.port, app.env);
-});
+module.exports = app;
