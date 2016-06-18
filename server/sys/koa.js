@@ -7,19 +7,14 @@ const logger = require("koa-logger");
 const json = require('koa-json');
 const compress = require("koa-compress");
 const bodyParser = require("koa-bodyparser");
-const cors = require('koa-cors');
-const passport = require('koa-passport');
-const config = require('./config');
+const config = require('./../config');
 
 module.exports = function(app) {
 	if(app.env === 'development'){
 		app.use(responseTime());
 		app.use(logger());
 	}
-	app.use(cors({
-		origin: true,
-		credentials: true
-	}));
+
 	app.use(bodyParser());
 	app.use(json());
 	app.keys = [config.session.secrets];
@@ -32,6 +27,5 @@ module.exports = function(app) {
 		}),
 		cookie: config.session.cookie
 	}));
-	app.use(passport.initialize());
 	app.use(compress());
 };

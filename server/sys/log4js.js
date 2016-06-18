@@ -3,7 +3,7 @@
 var fs = require('fs');
 var _ = require('lodash');
 var log4js = require('log4js');
-var logConfig = require('./config').log;
+var logConfig = require('./../config').log;
 
 var appenders = [
 	{
