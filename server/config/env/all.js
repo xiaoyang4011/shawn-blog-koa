@@ -11,5 +11,12 @@ module.exports = {
 		backups: 100,
 		cwd: '.',
 		alwaysIncludePattern: true
+	},
+	session : {
+		secrets : 'lxy'
+	},
+	redis : {
+		host : '127.0.0.1',
+		port : 6379
 	}
 };
