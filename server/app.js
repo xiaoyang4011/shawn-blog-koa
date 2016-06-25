@@ -13,9 +13,7 @@ require('./sys/koa')(app)
 require('./routes')(app)
 
 app.on('error', (err, ctx) => {
-  if (process.env.NODE_ENV !== 'test') {
-    console.error('error', err)
-  }
+  console.error('error', err)
 })
 
 // Start server
