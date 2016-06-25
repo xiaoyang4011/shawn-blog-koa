@@ -16,7 +16,7 @@ process.on('SIGTERM', function () {
   process.exit(0)
 })
 
-var modelFiles = glob.sync('./../models/**.model.js')
+var modelFiles = glob.sync('./server/models/**.model.js')
 
 modelFiles.forEach(function (modelFilePath) {
   require(path.resolve(modelFilePath))
