@@ -38,7 +38,6 @@
     "koa-response-time": "^2.0.0",
     "koa-router": "^7.0.0",
     "lodash": "^4.13.1",
-    "log4js": "^0.6.37",
     "mongoose": "^4.5.0"
   },
   "devDependencies": {
