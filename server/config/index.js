@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-var _ = require('lodash');
+const _ = require('lodash')
 
 /**
  * Load app configurations
@@ -8,4 +8,4 @@ var _ = require('lodash');
 module.exports = _.assign(
 	require('./env/all'),
 	require('./env/' + process.env.NODE_ENV) || {}
-);
+)
