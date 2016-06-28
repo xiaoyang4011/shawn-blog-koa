@@ -4,6 +4,7 @@
 [![Dependency Status](https://david-dm.org/xiaoyang4011/shawn-blog-koa.svg)](https://david-dm.org/xiaoyang4011/shawn-blog-koa)
 [![devDependency Status](https://david-dm.org/xiaoyang4011/shawn-blog-koa/dev-status.svg)](https://david-dm.org/xiaoyang4011/shawn-blog-koa#info=devDependencies)
 
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 ###Tech Stack
 
  - koa 2.0
