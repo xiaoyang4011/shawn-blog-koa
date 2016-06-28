@@ -11,7 +11,7 @@ const coveralls = require('gulp-coveralls')
 gulp.task('set-env', function () {
   env({
     vars: {
-      'NODE_ENV': 'test'
+      'NODE_ENV': 'unittesting'
     }
   })
 })
