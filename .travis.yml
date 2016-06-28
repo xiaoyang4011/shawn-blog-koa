@@ -1,0 +1,31 @@
+sudo: false
+
+language: node_js
+
+env:
+  - CXX=g++-4.8
+
+node_js:
+  - '4'
+  - stable
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+
+services:
+  - mongodb
+  - redis-server
+
+before_install:
+  - $CXX --version
+
+before_script:
+  - npm install -g gulp
+
+script: gulp test
+
+after_script: gulp coveralls
