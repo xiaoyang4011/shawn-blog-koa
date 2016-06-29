@@ -26,6 +26,9 @@ describe('test/api/logs.test.js', function () {
         .expect('Content-Type', /json/)
         .end(function (err, res) {
           if (err) return done(err)
+
+          res.body.data.title.should.be.equal('test1241231');
+
           console.log(res.body)
           done()
         })

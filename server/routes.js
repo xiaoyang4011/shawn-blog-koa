@@ -1,10 +1,12 @@
 'use strict'
 
 const Router = require('koa-router')()
-const article = require('./api/article')
+const Article = require('./api/article')
+const User = require('./api/user')
 
 module.exports = function (app) {
-  Router.use('/test', article.routes())
+  Router.use('/test', Article.routes())
+  Router.use('/user', User.routes())
 
   Router.get('/*', (ctx, next) => {
     ctx.body = {status: 'success', data: '台湾是中国不可分割的一部分.'}

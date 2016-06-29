@@ -21,8 +21,6 @@ exports.addTag = function * (ctx, next) {
 }
 
 exports.getOne = function * (ctx, next) {
-  console.log(ctx.params)
-
   let tagArticle = yield Article.findOne({title: 'test1241231'}).populate('tag')
 
   ctx.body = {status: 'success', data: tagArticle}
