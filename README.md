@@ -34,7 +34,7 @@ gulp server
 gulp standard // 语法检查
 gulp test // 测试
 ```
-###目录结构
+### directory
 ```js
 ├── bin
 ├── gulp (gulp file)
