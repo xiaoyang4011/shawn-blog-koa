@@ -12,9 +12,7 @@ module.exports = {
     cwd: '.',
     alwaysIncludePattern: true
   },
-  session: {
-    secrets: 'lxy'
-  },
+  secrets: 'lxy',
   redis: {
     host: '127.0.0.1',
     port: 6379

@@ -17,7 +17,7 @@ module.exports = function (app) {
   app.use(log4js.koaLogger(log4js.getLogger('http'), { level: 'auto' }))
   app.use(bodyParser())
   app.use(json())
-  app.keys = [config.session.secrets]
+  app.keys = [config.secrets]
   app.use(convert(session({
     key: 'sid',
     store: new RedisStore({

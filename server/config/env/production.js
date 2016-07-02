@@ -7,5 +7,8 @@ module.exports = {
     backups: 100,
     cwd: '.',
     alwaysIncludePattern: true
+  },
+  session: {
+    cookie: {maxAge: 86400}
   }
 }
