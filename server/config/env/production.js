@@ -9,6 +9,6 @@ module.exports = {
     alwaysIncludePattern: true
   },
   session: {
-    cookie: {maxAge: 86400}
+    cookie: {maxAge: 86400000}
   }
 }

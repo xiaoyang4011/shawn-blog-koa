@@ -16,6 +16,6 @@ module.exports = {
     }
   },
   session: {
-    cookie: {maxage: 5000}
+    cookie: {maxage: 600000}
   }
 }

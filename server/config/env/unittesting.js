@@ -14,5 +14,8 @@ module.exports = {
       user: '',
       pass: ''
     }
+  },
+  session: {
+    cookie: {maxAge: 300000}
   }
 }
