@@ -1,1 +1,19 @@
-// for pm2 Start
+{
+	"apps" : [
+        {
+            "name"          : "shawn blog api",
+            "script"        : "./server/app.js",
+            "log_date_format"  : "YYYY-MM-DD HH:mm Z",
+            "out_file"      : "/log/pm2-out.log",
+            "error_file"    : "/log/pm2-err.log",
+            "pid_file"      : "/log/shawn-api-koa.pid",
+            "ignoreWatch"   : ["[\\/\\\\]\\./", "node_modules"],
+            "watch"         : "false",
+            "node_args"     : "--harmony",
+            "exec_mode"     : "fork_mode",
+            "env": {
+              "NODE_ENV"    : "production"
+            }
+        }
+    ]
+}

@@ -17,8 +17,8 @@ app.on('error', (err, ctx) => {
 })
 
 // Start server
-app.listen(3000, function () {
-  console.log('Koa server listening on port ' + 3000)
+app.listen(3500, function () {
+  console.log('Koa server listening on port ' + 3500)
 })
 
 module.exports = app

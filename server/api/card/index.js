@@ -1,9 +1,9 @@
 'use strict'
 
 const router = require('koa-router')()
-const controller = require('./users.controller')
+const controller = require('./card.controller')
 const co = require('co')
 
-router.get('/register', co.wrap(controller.register))
+router.get('/', co.wrap(controller.getList))
 
 module.exports = router

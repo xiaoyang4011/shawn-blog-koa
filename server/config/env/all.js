@@ -2,9 +2,6 @@
 
 module.exports = {
   port: process.env.PORT || 3000,
-  recluster: {
-    pidFilePath: '/var/run/yunniao/'
-  },
   log: {
     logLevel: 'INFO',
     maxLogSize: 10485760,
