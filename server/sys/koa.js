@@ -11,12 +11,14 @@ const log4js = require('koa-log4')
 const convert = require('koa-convert')
 const config = require('./../config')
 const cors = require('koa-cors')
+const errorHandle = require('./../util/error')
 
 module.exports = function (app) {
   app.use(convert(cors({
     origin: true,
     credentials: true
   })))
+  app.use(errorHandle())
   app.use(responseTime())
   app.use(logger())
   app.use(log4js.koaLogger(log4js.getLogger('http'), { level: 'auto' }))
